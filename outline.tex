@@ -1,0 +1,161 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\title{Notes on Abbot's Introduction to Analysis}
+\author{Zaid Khan}
+\date{\today}
+
+
+
+\begin{document}
+\maketitle
+\clearpage
+
+\tableofcontents
+
+
+\clearpage
+
+
+\section{TODO}
+
+
+\section{Sequences and Series}
+\subsection{The Limit of  Sequence}
+\subsubsection{Definition of convergence for a sequence}
+A sequence converges to some number \textit{a} if \begin{math} \forall \epsilon > 0 \quad \exists N \in \mathbb{N} \end{math} such that \begin{math} \forall n \geq N \implies | a_{n} - a | < \epsilon     \end{math}.
+
+\subsubsection{Outline of a Proof of Convergence}
+
+
+\begin{itemize}
+
+\item Let \( \epsilon > 0\) be arbitrary.
+
+\item Demonstrate a choice of \( N \in \mathbb{N} \). This essentially means solve for N in terms of \( \epsilon > 0 \) .
+
+\item Show that \textit{N} actually works. This is simply the inequality that you derived in the previous item.
+
+\item Assume \( n \geq N \).
+
+\item Derive the inequality \( | a_{n}  - a | < \epsilon    \) . Again, this is simply equivalent to solving for \( \epsilon \) in an inequality.
+
+
+\end{itemize}
+
+\subsection{The Monotone Convergence Theorem}
+
+A sequence is \textbf{monotone} if it is either increasing or
+decreasing.
+
+\subsubsection{Monotone Convergence Theorem}
+If a sequence is monotone and bounded, then it converges.
+
+An infinite series is said to be converging if the sequence of partial
+sums is converging. Note how the definition of convergence of a series
+is linked back to the notion of convergence for a sequence. 
+
+ 
+\subsection{Subsequences and the Bolzano-Weierstrass Theorem}
+
+\subsubsection{Subsequence Convergence Theorem}
+The subsequences of a convergent sequence converge to the same limit as the original sequence.
+
+
+\subsubsection{Bolzano-Weierstrass Theorem}
+There exists a convergent subsequence within every bounded sequence.
+
+
+
+\subsection{The Cauchy Criterion}
+
+\subsubsection{Cauchy Criterion Definition}
+
+A sequence \( a_{n} \) is called a \textit{Cauchy sequence} if \( \forall \epsilon >0 \quad \exists \quad N \in \mathbb{N} : m,n \geq N \implies \left | a_{n} - a_{m}    \right |  < \epsilon  \) . To simplify, a sequence is cauchy if there exists a point in the sequence after which all the numbers are closer to each other than to any arbitrary epsilon.
+
+
+\subsubsection{Cauchy Convergence}
+
+\begin{itemize}
+
+\item Every convergent sequence is a Cauchy sequence.
+
+\item Cauchy sequences are bounded.
+
+\item A sequence converges if and only if it is a Cauchy Sequence.
+
+\end{itemize}
+
+
+\subsubsection{Effects of Completeness on Convergence}
+Completeness is a necessary condition in order for the above definitions of convergence to work correctly. In particular, we need a way to guarantee that when a sequence is converging, the number that it is converging to is actually there. This is part of the reason why the real numbers were introduced - the rationals have holes in them. The Axiom of Completeness, Nested Interval Property, Bolzano-Weierstrauss,Cauchy Criterion, and Monotone Convergence Theorem are all equivalent.
+
+
+\subsection{Properties of Infinite Series}
+
+\subsubsection{Convergence of an Infinite Series}
+The convergence of an infinite series \( a_{k} \) is defined in terms of the sequence of its partial sums \( s_{n} \). \( \Sigma_{1}^{\infty} a_{k} = A \) means that \( lim(s_{n}) = A  \).
+
+
+\subsubsection{Cauchy Criterion for Series}
+
+\begin{itemize}
+
+\item The series \(  \Sigma_{k=1}^{\infty} \) converges if and only if, given \( \epsilon > 0 \quad \exists N \in \mathbb{N} : n>m \geq N \implies \left | a_{m+1}+ a_{m+2} + \ldots + a_{n}     \right | < \epsilon \).
+
+\item \textbf{Corrollary:} If the series \( \Sigma_{k=1}^{\infty} a_{k}  \) converges, then \( a_{k} \rightarrow 0 \).
+
+\end{itemize}
+
+
+\subsubsection{Comparison Test}
+Assume \( (a_{k}) \) and \( (b_{k})  \) are sequences satisfying \( 0 \leq a_{k} \leq b_{k} \quad \forall k \in \mathbb{N} \).
+
+
+\begin{itemize}
+
+\item If \( \Sigma b_{k}  \) converges, then \(  \Sigma a_{k}  \) also converges.
+
+\item If \( \Sigma a_{k} \) diverges, then \( \Sigma b_{k} \) also diverges.
+
+
+\end{itemize}
+
+\subsubsection{Absolute Convergence Test}
+
+If the series \( \Sigma \left |  a_{k}  \right |  \) converges, then \( \Sigma a_{k}  \) converges as well. A sequence is said to converge absolutely if for a sequence \( a_{k} \) , \(  \sigma_{k=1}^{\infty} | a_{k} |  \) also converges. Otherwise, the sequence is said to converge conditionally.
+
+\subsubsection{Alternating Series Test}
+Let \( (a_{n}) \) be a sequence that is monotonically decreasing and has a limit of 0. Then, the alternating series \( \Sigma_{n=1}^{\infty} (-1)^{n+1} a_{n}   \) converges.
+
+\subsubsection{Absolute Convergent Rearrangement Theorem For Series}
+
+If a series converges absolutely, than any rearrangement of the series converges to the same limit.
+
+\section{Topology of the Reals}
+
+
+\subsection{Open and Closed Sets}
+
+\subsubsection{Epsilon Neighborhoods}
+
+An $ \epsilon -neighborhood $ is a set \( V_{\epsilon} (x) = \left \{ x \in \mathbb{R} : | x- a | < \epsilon \right \} \). Note that the interval is open - it does not contain the endpoints since the distance must be less than epsilon.
+
+\subsubsection{Definition of an Open Set}
+
+A set \( O \subseteq \mathbb{R} \) is \textit{open} if \( \forall a \in O \) there exists an $ \epsilon $ -neighborhood \( V_{\epsilon} (a) \subseteq O \). Recall that an $\epsilon - neighborhood$ is the set of points surrounding a point that are less than $ \epsilon $ away from it. This set particular set does not contain the endpoints. 
+
+\subsubsection{Union and Intersection of Open Sets}
+
+The union of an arbitrary collection of open sets is open. The intersection of a finite collection of open sets is open. 
+
+\subsubsection{Limit Points}
+
+A point $x$ is a \textit{limit point} of a set A if every $ \epsilon$-neighborhood  $V_{\epsilon}(x)$ of $x$ intersects A at some point other than A.  Alternate interpretation: a limit point is the limit of a sequence at the edge of the set.
+
+\subsubsection{Limit Point Sequence Convergence}
+
+A point $x$ is a limit point of a set $A$ if and only if $x=lim \quad a_n $ for some sequence $ (a_n) $ contained in $A$ satisfying \(a_n \neq x \quad \forall n \in A \).
+
+\end{document}
