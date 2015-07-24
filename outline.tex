@@ -158,4 +158,66 @@ A point $x$ is a \textit{limit point} of a set A if every $ \epsilon$-neighborho
 
 A point $x$ is a limit point of a set $A$ if and only if $x=lim \quad a_n $ for some sequence $ (a_n) $ contained in $A$ satisfying \(a_n \neq x \quad \forall n \in A \).
 
+\subsubsection{Definition of an Isolated Point}
+A point $ a \in A $ is an isolated point of A if it is not a limit point of A.
+
+
+\subsubsection{Definition of a Closed Set}
+A set $ F \subseteq \mathbb{R} $ is closed if it contains its limit points.
+
+\subsubsection{Closed Sets and Cauchy Sequences}
+A set $ F \subseteq \mathbb{R} $ is closed if and only if every Cauchy sequence contained in F has a limit that is also an element of F.
+
+\subsubsection{Density of Q in R}
+For every $y \in \mathbb{R} $, there exists a sequence of rational numbers that converges to y.
+
+\subsubsection{Closure}
+
+Given a set $ A \subseteq \mathbb{R} $, let L be the set of all limit points of A. The set $A \cup L $ is defined to be the closure of $ \overline{A}$.
+
+For any $ A \subseteq \mathbb{R} $, the closure $ \overline{A}$ is a closed set and the smallest closed set containing A.
+
+\subsubsection{Complements and Open/Closed Sets}
+
+A set O is open if an only if $ O^c$ is closed. LIkewise, a set F is closed if and only if $F^c$ is open.
+
+\begin{itemize}
+
+\item The union of a finite collection of finite sets is closed.
+
+\item The intersection of an arbitrary collection of arbitrary sets is closed.
+
+\end{itemize}
+
+\subsection{Compact Sets}
+
+
+\subsubsection{Compactness}
+
+A set $ K \subseteq \mathbb{R} $ is compact if every sequence in K has a subsequence that converges to a limit which is also in K.
+
+\subsubsection{Characterization of Compactness in R}
+A set $ K \subseteq R$ is compact if and only if it is closed and bounded. A set $A$ is bounded if \( \exists M: |a| \leq M \forall a \in A     \).
+
+\subsubsection{Nested Compact Set Property}
+
+If \( K_1 \supseteq K_2 \supseteq K_3 \supseteq \ldots K_n    \) is a nested sequence of nonempty compact, sets, than the intersection \( \bigcap_{n=1}^{\infty} K_n      \) is not empty.
+
+\subsubsection{Open Covers}
+
+Let $ A \subseteq \mathbb{R} $. An open cover for A is a possibly infinite collection of open sets whose union contains $A$. A finite subcover is finite collection of open sets from the original open cover whose union still completely contains $A$.
+
+\subsubsection{Heine-Borel Theorem}
+Let K be a subset of $\mathbb{R}$. All of the following statements are equivalent in the sense that any one of them implies the two others.
+
+\begin{itemize}
+
+\item K is compact.
+
+\item K is closed and bounded.
+
+\item Every open cover for K has a finite subcover.
+
+\end{itemize}
+
 \end{document}
